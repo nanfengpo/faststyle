@@ -26,6 +26,24 @@ and then forward passing through these trained nets an image of Chicago (also bo
 
 \*This dependency can be easily switched to your favourite image I/O library by tweaking the wrapped functions in ```utils.py```. Note it's still needed for ```stylize_webcam.py```.
 
+## Architecture
+
+- train.py
+  - vgg16.py
+  - im_transf_net.py
+  - datapipe.py
+  - utils.py
+  - losses.py
+- stylize_image.py
+  - im_transf_net.py
+  - utils.py
+- stylize_webcam.py
+  - im_transf_net.py  
+- slow_style.py
+  - vgg16.py
+  - utils.py
+  - losses.py
+  
 ## Setup
 
 If you just intend to utilize the pretrained models, then all you need to do is:
