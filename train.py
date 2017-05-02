@@ -141,6 +141,7 @@ def main(args):
     loss_content_layers = ['vgg/' + i + ':0' for i in loss_content_layers]
 
     # Get target Gram matrices from the style image.
+    # 从style image中得到目标参数矩阵
     with tf.variable_scope('vgg'):
         X_vgg = tf.placeholder(tf.float32, shape=style_img.shape, name='input')
         vggnet = vgg16.vgg16(X_vgg)

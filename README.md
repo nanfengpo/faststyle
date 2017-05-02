@@ -30,7 +30,7 @@ and then forward passing through these trained nets an image of Chicago (also bo
 
 - train.py
   - vgg16.py
-  - im_transf_net.py
+  - im_transf_net.py：主要文件：图片转换网络。由CNN实现。
   - datapipe.py
   - utils.py
   - losses.py

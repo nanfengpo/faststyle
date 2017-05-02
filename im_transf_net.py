@@ -1,5 +1,12 @@
 """
 Functions used for the creation of the image transformation network.
+主要是create_net函数：输入输出均为3层矩阵（三基色）
+- 没有池化（pool）
+- 每个卷积后带一个relu
+- 三级卷积层：
+  - relu(inst_norm(conv2d(：初始卷积，由3层矩阵变为64层矩阵
+  - res_layer(：驻留卷积，保持64层矩阵不变
+  - relu(inst_norm(upconv2d(：上采样卷积，由64层矩阵变为3层矩阵
 
 File author: Grant Watson
 Date: Jan 2017
@@ -25,6 +32,7 @@ def create_net(X, upsample_method='deconv'):
         + convolution. Description of 2nd method is available at:
             http://distill.pub/2016/deconv_checkerboard/
     """
+
     assert(upsample_method in ['deconv', 'resize'])
 
     # Input
