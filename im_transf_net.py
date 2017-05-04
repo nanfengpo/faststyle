@@ -1,3 +1,4 @@
+# coding:utf-8
 """
 Functions used for the creation of the image transformation network.
 主要是create_net函数：输入输出均为3层矩阵（三基色）

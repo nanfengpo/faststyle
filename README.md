@@ -29,7 +29,7 @@ and then forward passing through these trained nets an image of Chicago (also bo
 ## Architecture
 
 - train.py
-  - vgg16.py
+  - vgg16.py：著名的神经网络VGGNet
   - im_transf_net.py：主要文件：图片转换网络。由CNN实现。
   - datapipe.py
   - utils.py
