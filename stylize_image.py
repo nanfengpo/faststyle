@@ -1,3 +1,5 @@
+
+# -*- coding:utf-8 -*-
 """
 Used to load and apply a trained faststyle model to an image in order to
 stylize it.
@@ -60,6 +62,8 @@ if __name__ == '__main__':
     img_4d = img[np.newaxis, :]
 
     # Create the graph.
+    # 注意！这里和训练的没有一点关系！只是使用saver.restore恢复了train.py里训练后保存的模型！
+    # 但是graph还是要有的，否则模型就没有存在的意义
     with tf.variable_scope('img_t_net'):
         X = tf.placeholder(tf.float32, shape=img_4d.shape, name='input')
         Y = create_net(X, upsample_method)
